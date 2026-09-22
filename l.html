@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>林嘉齡 HR 顧問 ｜ 陪你梳理職場路，找回安心與力量</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    body {
+      background-color: #FEF9EF; /* 柔和暖色背景 */
+      color: #334E68; /* 深藍灰文字，閱讀視覺極佳 */
+      line-height: 1.75;
+    }
+
+    /* Header Navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+      background: rgba(254, 249, 239, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #F3EAD8;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #3A7CA5; /* 天空藍 Logo */
+    }
+
+    .logo span {
+      color: #52796F;
+      font-size: 14px;
+      margin-left: 8px;
+      font-weight: 500;
+    }
+
+    nav a {
+      margin: 0 16px;
+      text-decoration: none;
+      color: #4A6572;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #E68325;
+    }
+
+    .nav-btn {
+      background: linear-gradient(135deg, #E68325 0%, #F4A261 100%);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 4px 14px rgba(230, 131, 37, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(230, 131, 37, 0.35);
+    }
+
+    /* Base Section */
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: #3A7CA5;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      font-size: 16px;
+      color: #52796F;
+      font-weight: 500;
+    }
+
+    /* 01. Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 85vh;
+      gap: 60px;
+      background: radial-gradient(circle at top right, #E8F4F8 0%, #FEF9EF 65%);
+    }
+
+    .hero-content {
+      flex: 1.1;
+      max-width: 620px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      background-color: #E8F0EC;
+      color: #386641;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      border: 1px solid #C8E0D0;
+    }
+
+    .hero-content h1 {
+      font-size: 42px;
+      color: #2C4A6F;
+      line-height: 1.35;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .hero-content h1 span {
+      color: #E68325;
+      background: linear-gradient(120deg, rgba(244, 162, 97, 0.2) 0%, rgba(244, 162, 97, 0) 100%);
+      padding: 0 4px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      color: #4A6572;
+      margin-bottom: 36px;
+    }
+
+    .cta-container {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #E68325 0%, #F4A261 100%);
+      color: white;
+      padding: 16px 34px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 0 6px 20px rgba(230, 131, 37, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(230, 131, 37, 0.4);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #3A7CA5;
+      border: 2px solid #D0E3F0;
+      padding: 16px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: #3A7CA5;
+      background: #E8F4F8;
+    }
+
+    .hero-visual {
+      flex: 0.9;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Profile Card */
+    .profile-card {
+      width: 100%;
+      max-width: 400px;
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(74, 144, 226, 0.18);
+      position: relative;
+      border: 4px solid #FFFFFF;
+    }
+
+    .profile-img-container {
+      width: 100%;
+      height: 320px;
+      position: relative;
+    }
+
+    .profile-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .profile-info {
+      background: linear-gradient(150deg, #4A90E2 0%, #3A7CA5 100%);
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .card-quote {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      padding: 14px 18px;
+      border-radius: 12px;
+      margin-top: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 260px;
+      right: 16px;
+      background: white;
+      padding: 12px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      color: #334E68;
+      text-align: left;
+      border: 2px solid #FFF3D6;
+    }
+
+    .card-badge h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #E68325;
+    }
+
+    .card-badge p {
+      font-size: 12px;
+      color: #666;
+    }
+
+    /* 02. Pain Points Section */
+    .pain-points {
+      background-color: #FFFFFF;
+      border-radius: 32px;
+      margin: 0 4%;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .pain-card {
+      background: #FEF9EF;
+      padding: 32px 24px;
+      border-radius: 20px;
+      border: 1px solid #F3EAD8;
+      transition: transform 0.3s;
+    }
+
+    .pain-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pain-card h3 {
+      font-size: 20px;
+      color: #2C4A6F;
+      margin-bottom: 12px;
+    }
+
+    .pain-card .problem {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 20px;
+      min-height: 70px;
+    }
+
+    .pain-card .solution {
+      background: #E8F4F8;
+      color: #2C4A6F;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      border-left: 4px solid #3A7CA5;
+    }
+
+    /* 03. Core Services */
+    .services .service-card {
+      background: white;
+      padding: 36px 28px;
+      border-radius: 20px;
+      border: 1px solid #F3EAD8;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      color: #2C4A6F;
+      margin-bottom: 16px;
+    }
+
+    .service-card ul {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .service-card ul li {
+      margin-bottom: 10px;
+      color: #4A6572;
+      font-size: 15px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .service-card ul li::before {
+      content: "✦";
+      color: #E68325;
+      font-size: 14px;
+      position: absolute;
+      left: 0;
+    }
+
+    .service-link {
+      color: #E68325;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* 04. Brand Story Section */
+    .brand-story {
+      background: linear-gradient(135deg, #4A90E2 0%, #3A7CA5 100%);
+      color: white;
+      border-radius: 32px;
+      margin: 60px 4%;
+      padding: 60px 8%;
+      display: flex;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .story-img-box {
+      flex: 0.8;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      border: 3px solid rgba(255,255,255,0.3);
+    }
+
+    .story-img-box img {
+      width: 100%;
+      height: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .story-content {
+      flex: 1.2;
+    }
+
+    .story-content h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #FFF3D6;
+    }
+
+    .story-content p {
+      opacity: 0.95;
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    /* 05. Process Steps */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .step-item {
+      background: white;
+      padding: 24px 16px;
+      border-radius: 16px;
+      border: 1px solid #F3EAD8;
+    }
+
+    .step-num {
+      width: 42px;
+      height: 42px;
+      background: #FFF3D6;
+      color: #E68325;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin: 0 auto 16px;
+    }
+
+    /* 06. Lead Magnet Section */
+    .lead-section {
+      background: linear-gradient(135deg, #E8F4F8 0%, #FFF3D6 100%);
+      border-radius: 28px;
+      padding: 50px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      border: 1px solid #D0E3F0;
+    }
+
+    .lead-box {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .lead-form {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .lead-form input {
+      padding: 14px 20px;
+      border-radius: 25px;
+      border: 1px solid #C4DCEB;
+      flex: 1;
+      font-size: 15px;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #718096;
+      border-top: 1px solid #F3EAD8;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cta-container {
+        justify-content: center;
+      }
+
+      .brand-story {
+        flex-direction: column;
+        margin: 20px 4%;
+        padding: 40px 6%;
+      }
+
+      header nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="logo">林嘉齡 HR 顧問 <span>｜ 陪你找回職場的安心與方向</span></div>
+    <nav>
+      <a href="#services">1對1 職涯定位</a>
+      <a href="#services">履歷與面試教練</a>
+      <a href="#services">職場溝通與權益</a>
+      <a href="#story">關於我</a>
+    </nav>
+    <a href="#lead" class="nav-btn">預約 1 對 1 安心對談</a>
+  </header>
+
+  <!-- 01. Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">🤝 專屬上班族的職場溫暖後盾</div>
+      <h1>每一個卡關的職場，<br>都能找到<span>安心踏實的出路</span>。</h1>
+      <p>職場不該是一場孤獨的消耗戰。結合 10 年人資主管實戰視角，用溫暖接住迷惘，用專業梳理優勢，陪你從容自信地邁下一個階段。</p>
+      
+      <div class="cta-container">
+        <a href="#lead" class="btn-primary">預約 1 對 1 安心諮詢</a>
+        <a href="#lead" class="btn-secondary">免費領取《轉職優勢清單》</a>
+      </div>
+    </div>
+
+    <!-- 首頁專業 HR 顧問真人肖像 -->
+    <div class="hero-visual">
+      <div class="profile-card">
+        <div class="profile-img-container">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="林嘉齡 HR顧問 專業肖像圖">
+        </div>
+        
+        <div class="card-badge">
+          <h4>100% 傾聽陪伴</h4>
+          <p>揮別迷惘，建立安心自信</p>
+        </div>
+
+        <div class="profile-info">
+          <h3 style="font-size: 22px; font-weight: 700;">林嘉齡 顧問</h3>
+          <p style="font-size: 14px; opacity: 0.9; margin-top: 4px;">10 年資深 HR 主管 ｜ 懂你卡點的面試官</p>
+          
+          <div class="card-quote">
+            <p style="font-size: 13px; font-style: italic;">「你不必獨自焦慮，讓我陪你一步步找回底氣。」</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02. Positive Empathy Section -->
+  <section class="pain-points">
+    <div class="section-title">
+      <h2>迷惘只是暫時的，你比自己想像的更有力量</h2>
+      <p>這些職場困頓我都看過，也完全理解。在這裡你可以卸下壓抑，我們一起釐清方向。</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="pain-card">
+        <h3>🌱 突破升遷瓶頸</h3>
+        <div class="problem">「每天忙忙碌碌，卻感覺遇到天花板？想改變現狀，卻不知道優勢在哪？」</div>
+        <div class="solution">🤝 <b>溫暖陪伴：</b><br>重新盤點天賦與核心勝任力，陪伴你訂定務實且令人放心的職涯藍圖。</div>
+      </div>
+
+      <div class="pain-card">
+        <h3>✨ 展現履歷亮點</h3>
+        <div class="problem">「明明很有實力，卻不會包裝自己？投出的履歷總是拿不到理想面試？」</div>
+        <div class="solution">🤝 <b>溫暖陪伴：</b><br>用招募官視角重新修飾實績，透過模擬練習建立從容與自信。</div>
+      </div>
+
+      <div class="pain-card">
+        <h3>🛡️ 告別職場內耗</h3>
+        <div class="problem">「面對向上管理困境或勞資疑慮，害怕發聲，每天上班都備感壓力？」</div>
+        <div class="solution">🤝 <b>溫暖陪伴：</b><br>解析勞基法權益並設計溝通劇本，做你最堅實、最放心的後盾。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03. Core Services Section -->
+  <section class="services" id="services">
+    <div class="section-title">
+      <h2>三步陪伴，穩健握回職涯主導權</h2>
+      <p>結合 HR 專業視角與暖心傾聽，帶你走出迷霧，看見方向</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="service-card">
+        <div>
+          <h3>🌱 01. 1對1 職涯定位</h3>
+          <ul>
+            <li>深度梳理核心勝任力與價值觀</li>
+            <li>人力資源盤點工具應用</li>
+            <li>客製化個人轉職地圖</li>
+          </ul>
+        </div>
+        <a href="#lead" class="service-link">瞭解定位細節 ➔</a>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <h3>✍️ 02. 履歷與面試教練</h3>
+          <ul>
+            <li>HR 視角精修 STAR 亮點履歷</li>
+            <li>模擬面試實戰自信演練</li>
+            <li>談判底氣與薪資策略</li>
+          </ul>
+        </div>
+        <a href="#lead" class="service-link">瞭解教練細節 ➔</a>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <h3>🛡️ 03. 職場溝通與權益</h3>
+          <ul>
+            <li>向上管理與對話劇本設計</li>
+            <li>離職/資遣/加班權益解析</li>
+            <li>建立職場自我保護界線</li>
+          </ul>
+        </div>
+        <a href="#lead" class="service-link">瞭解權益細節 ➔</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04. Brand Story Section -->
+  <div class="brand-story" id="story">
+    <div class="story-img-box">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800" alt="一對一專業職涯諮詢情境圖">
+    </div>
+
+    <div class="story-content">
+      <h2>🤝 陪伴初衷：做你最沉穩放心的職場後盾</h2>
+      <p>在擔任 HR 與招募主管的 10 年間，我看過無數張履歷與面試者的焦慮。我發現許多極具潛力的上班族，每天把最好的能量獻給工作，卻在日復一日的忙碌與內耗中，逐漸失去自信與安全感。</p>
+      <p>我是林嘉齡，我成立諮詢服務的初衷，是希望能將這 10 年的專業經驗，轉化為陪伴你前行的堅實力量，讓你不再獨自面對焦慮與委屈。</p>
+      <p><b>✨ 這裡沒有冰冷的評價，只有最實用的策略與溫暖的陪伴。帶你找回底氣，安心邁向屬於你的高光職場。</b></p>
+    </div>
+  </div>
+
+  <!-- 05. Process Section -->
+  <section>
+    <div class="section-title">
+      <h2>安心對談流程</h2>
+      <p>輕鬆 4 步，一步步找回清晰與踏實感</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <h4>線上預約對談</h4>
+        <p style="font-size: 13px; color: #666; margin-top: 6px;">選擇適合時間與議題</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <h4>填寫現況問卷</h4>
+        <p style="font-size: 13px; color: #666; margin-top: 6px;">梳理履歷或卡點</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <h4>1對1 深度諮詢</h4>
+        <p style="font-size: 13px; color: #666; margin-top: 6px;">60 分鐘線上安心對談</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <h4>獲取行動方案</h4>
+        <p style="font-size: 13px; color: #666; margin-top: 6px;">獲得個人專屬報告</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06. Lead Magnet Section -->
+  <section id="lead">
+    <div class="lead-section">
+      <div class="lead-box">
+        <h3 style="font-size: 24px; color: #2C4A6F; margin-bottom: 8px;">🎁 為自己的職涯注入踏實與力量</h3>
+        <p style="color: #4A6572;">給自己 5 分鐘進行一次溫柔的梳理。免費領取《HR 視角：轉職優勢與自我健檢清單》。</p>
+      </div>
+      <div class="lead-box">
+        <form class="lead-form" onsubmit="event.preventDefault(); alert('感謝領取！請至信箱收信。');">
+          <input type="email" placeholder="請輸入您的 Email" required>
+          <button type="submit" class="btn-primary" style="border: none; cursor: pointer;">免費領取 ➔</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 林嘉齡 HR 顧問 ｜ 版權所有 ｜ 隱私權政策</p>
+  </footer>
+
+</body>
+</html>
